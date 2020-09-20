@@ -33,5 +33,8 @@ int main() {
     cout << "Listsize: " << list_1.getListsize() << endl;
     cout << "length: " << list_1.getLength() << endl;
     cout<<"------END------"<<endl;
+
+    cout<<"test reverse"<<endl;
+    cout<<list_1.reverse()<<endl;
     return 0;
 }
