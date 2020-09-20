@@ -26,7 +26,9 @@ public:
 
     void remove(const int &pos);
 
-    List<T>& reverse();
+    void reverse();
+
+    void move(int k);
 
     int getLength() const;
 
@@ -101,7 +103,7 @@ int List<T>::getLength() const {
 }
 
 template<typename T>
-List<T>& List<T>::reverse() {
+void List<T>::reverse() {
     int i{},j{length-1},temp{};
     while (i<j){
         temp=head[i];
@@ -110,7 +112,18 @@ List<T>& List<T>::reverse() {
         ++i;
         --j;
     }
-    return *this;
+}
+
+template<typename T>
+void List<T>::move(int k ) {
+    T temp{};
+    while(k--){
+        temp=head[length-1];
+        for (int i = length-2; i >=0; --i) {
+            head[i+1]=head[i];
+        }
+        head[0]=temp;
+    }
 }
 
 

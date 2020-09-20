@@ -34,7 +34,14 @@ int main() {
     cout << "length: " << list_1.getLength() << endl;
     cout<<"------END------"<<endl;
 
-    cout<<"test reverse"<<endl;
-    cout<<list_1.reverse()<<endl;
+    cout<<"test reversing elements"<<endl;
+    list_1.reverse();
+    cout<<list_1<<endl;
+    cout<<"------END------"<<endl;
+
+    cout<<"test moving elements"<<endl;
+    list_1.move(1);
+    cout<<list_1<<endl;
+    cout<<"------END------"<<endl;
     return 0;
 }
